@@ -12,14 +12,14 @@
 
 // while(continuar === "sim"){
 
-//     let numeroTabuada = parseInt(PROMPT("Digite um número para ver sua tabuada (De 1 a 10): "))
+//     let numeroTabuada = parseInt(PROMPT("Digite um número para ver sua tabuada: "))
     
 //     while(isNaN(numeroTabuada) || numeroTabuada <= 0){
 
 //         console.log('=====================================================')  
 //         console.log("Valor inválido, Digite um número de 1 a 10")
 //         console.log('----------------------------------------------------')  
-//         numeroTabuada = parseInt(PROMPT("Digite um número para ver sua tabuada (De 1 a 10): "))
+//         numeroTabuada = parseInt(PROMPT("Digite um número para ver sua tabuada: "))
 
 //         if(!isNaN(numeroTabuada) && numeroTabuada >= 0){
 //             continue
