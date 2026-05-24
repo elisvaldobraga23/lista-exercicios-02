@@ -6,7 +6,7 @@
 //       laço for. Em seguida, pergunte se ele deseja ver outra tabuada e repita enquanto
 //       a resposta for "sim".
 
-// const PROMPT = require("prompt-sync")()
+const PROMPT = require("prompt-sync")()
 
 // let continuar = "sim"
 
@@ -51,4 +51,37 @@
 //     }
 
 // }
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex 02:Leia um número inteiro positivo e, usando um laço while, calcule e exiba quantos
+// dígitos ele possui. Trate o caso do número zero (que possui 1 dígito).
+// console.log("===============================")
+// console.log("    Quantidade de Dígitos")
+// console.log("===============================")
+
+// let numero = parseInt(PROMPT("Digite um número inteiro: "))
+// console.log("-------------------------------")
+// let numeroVerificacao = numero
+// let quantidadeDigitos = 0
+
+// if(numero === 0){
+//     quantidadeDigitos = 1
+//     console.log("O numero 0 possui 1 digito")
+//     console.log("-------------------------------")
+
+// } else if(numero > 0 && Number.isInteger(numero)){
+
+//     while(numeroVerificacao > 0){
+//         numeroVerificacao = Math.floor(numeroVerificacao / 10)
+//         quantidadeDigitos++
+//     }
+
+//     console.log(`O número ${numero}, possui ${quantidadeDigitos} ${(quantidadeDigitos === 1) ? "dígito" : "Dígitos"}`)
+//     console.log("-------------------------------")
+
+
+// } else{
+//     console.log("Digite apenas números inteiros positivos!")
+// }
+
 // |------------------------------------------------------------------------------------------------------------------|
