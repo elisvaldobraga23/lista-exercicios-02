@@ -20,7 +20,7 @@
 //         console.log("Valor inválido, Digite um número de 1 a 10")
 //         console.log('----------------------------------------------------')  
 //         numeroTabuada = parseInt(PROMPT("Digite um número para ver sua tabuada (De 1 a 10): "))
-    
+
 //         if(!isNaN(numeroTabuada) && numeroTabuada >= 0){
 //             continue
 //         }
@@ -34,7 +34,7 @@
 //         console.log("================================")
         
 //         for(let n = 1; n <= 10; n++){
-//             console.log(`${numeroTabuada} X ${n} = ${numeroTabuada * n}`)
+    //             console.log(`${numeroTabuada} X ${n} = ${numeroTabuada * n}`)
 //         }
 
 //         console.log("================================")
@@ -51,3 +51,4 @@
 //     }
 
 // }
+// |------------------------------------------------------------------------------------------------------------------|
