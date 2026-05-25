@@ -85,3 +85,71 @@ const PROMPT = require("prompt-sync")()
 // }
 
 // |------------------------------------------------------------------------------------------------------------------|
+
+// Ex03: Peça ao usuário quantos termos da sequência de Fibonacci deseja ver e exiba-os
+// usando um laço for. Exemplo: 1, 1, 2, 3, 5, 8, 13...
+
+
+// console.log("========================================")
+// console.log("        Sequência de FIBONACCI")
+// console.log("========================================")
+
+// let numero = parseInt(PROMPT("Quantos termos você deseja mostrar: "))
+
+// console.log("----------------------------------------")
+
+// let ehValido = true
+
+// if(isNaN(numero) || numero <= 0){
+//     ehValido = false
+// }
+
+// while(!ehValido){
+//     console.log("Número inválido")
+//     numero = parseInt(PROMPT("Quantos termos você deseja mostrar: "))
+//     console.log("----------------------------------------")
+    
+//     if(!isNaN(numero) && numero > 0){
+//         ehValido = true
+//     }
+// }
+
+// let termo1 = 1
+// let termo2 = 1
+
+// let sequenciaFibonacci = ""
+
+// if(numero === 1){
+//     sequenciaFibonacci = "1 - FIM"
+// } else if(numero === 2){
+//     sequenciaFibonacci = "1 - 1 - FIM"
+
+// } else{
+    
+//     sequenciaFibonacci = "1 - 1 - "
+
+//     let contador = 3
+    
+//     while(contador <= numero){
+    //         let termo3 = termo1 + termo2
+    
+    //         sequenciaFibonacci += `${termo3} - `
+    
+//         termo1 = termo2
+//         termo2 = termo3
+
+//         contador++
+//     }
+
+//     sequenciaFibonacci += "FIM"
+// }
+
+
+// console.log(sequenciaFibonacci)
+// console.log("----------------------------------------")
+
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex04: Defina uma senha fixa no código. Peça ao usuário que a digite e, usando um laço
+// do...while, permita no máximo 3 tentativas. Exiba se ele acertou ou se esgotou as
+// tentativas.
