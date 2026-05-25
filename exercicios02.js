@@ -153,3 +153,39 @@ const PROMPT = require("prompt-sync")()
 // Ex04: Defina uma senha fixa no código. Peça ao usuário que a digite e, usando um laço
 // do...while, permita no máximo 3 tentativas. Exiba se ele acertou ou se esgotou as
 // tentativas.
+
+
+// let senha = "123456"
+// let tentativas = 3
+
+// console.log("===========================================")
+// console.log("               Bem-Vindo(a)!")
+// console.log("===========================================")
+
+
+// do{
+//     let senhaUsuario = PROMPT("Digite sua senha: ")
+    
+//     console.log("-------------------------------------------")
+    
+    
+//     if( senhaUsuario === senha){
+        
+//         console.log("Senha válida! Acesso liberado.")
+//         console.log("===========================================")
+//         break
+        
+//     } else{
+        
+//         tentativas--
+        
+//         if(tentativas > 0){
+//             console.log(`Senha inválida! Você tem mais ${tentativas} ${tentativas > 1 ? "tentativas" : "tentativa"}.`)
+//             console.log("-------------------------------------------")
+//         } else{
+//             console.log("Suas tentativas acabaram!")
+//             console.log("===========================================")
+//         }
+//     }
+
+// }while(tentativas > 0)
