@@ -183,9 +183,147 @@ const PROMPT = require("prompt-sync")()
 //             console.log(`Senha inválida! Você tem mais ${tentativas} ${tentativas > 1 ? "tentativas" : "tentativa"}.`)
 //             console.log("-------------------------------------------")
 //         } else{
-//             console.log("Suas tentativas acabaram!")
+    //             console.log("Suas tentativas acabaram!")
 //             console.log("===========================================")
 //         }
 //     }
 
 // }while(tentativas > 0)
+
+
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex05: Leia um número N e exiba todos os números primos entre 2 e N usando laços
+// aninhados (for dentro de for). Exiba também a quantidade total de primos
+// encontrados.
+
+// console.log("==============================")
+// console.log("    ANALISADOR DE PRIMOS")
+// console.log("==============================")
+// console.log()
+// let numero = 0
+// do{
+//     numero = parseInt(PROMPT("Informe um número: "))
+//     console.log("------------------------------")
+//     console.log()
+    
+//     if(isNaN(numero) || numero <= 0){
+//         console.log("Valor inválido!!")
+//     }
+    
+// }while(isNaN(numero) || numero <= 0)
+    
+    
+// let totalPrimos = 0
+
+// let numerosPrimos = ""
+
+
+//     for( let numeroAtual = 2; numeroAtual <= numero; numeroAtual++){
+//         let quantidadeDivisores = 0
+//         for(let divisorAtual = 1; divisorAtual <= numeroAtual; divisorAtual++){
+            
+//             if(numeroAtual % divisorAtual === 0){
+//                 quantidadeDivisores++
+//             }  
+//         }
+        
+//         if(quantidadeDivisores === 2){
+//             if(numerosPrimos === ""){
+//                 numerosPrimos += numeroAtual
+                
+//             }else{
+//                 numerosPrimos += ` - ${numeroAtual}`
+                
+//             }
+//             totalPrimos++
+//         }
+//     }
+    
+// console.log("Primos encontrados:")
+// console.log(numerosPrimos)
+// console.log("------------------------------")
+// console.log()
+// console.log("Total de primos:", totalPrimos)
+// console.log("------------------------------")
+
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex06: Crie um array e leia via laço o nome e a nota de 5 alunos. Ao final, exiba: a média
+// da turma, o nome do aluno com maior nota e o nome do aluno com menor nota.
+// Não use funções prontas como Math.max().
+
+// console.log("===================================")
+// console.log("     GESTÃO DE ALUNOS E NOTAS")
+// console.log("===================================")
+
+// const alunos = []
+
+// let soma = 0
+
+
+
+// for(let c = 1; c <= 3; c++){
+//     let nome = PROMPT("Nome do aluno: ")
+//     let nota
+//     do{
+//         nota = Number(PROMPT("Nota do aluno: "))
+//         console.log("===================================")
+        
+//         if(isNaN(nota) || nota < 0){
+//             console.log("Valor inválido!")
+//         console.log("-----------------------------------")
+//         }
+//     }while(isNaN(nota) || nota < 0)
+        
+//     const aluno = [nome, nota]
+//     alunos.push(aluno)
+
+// }
+
+// let maior = alunos[0][1]
+// let nomeAlunoMaior = alunos[0][0]
+
+// let menor = alunos[0][1]
+// let nomeAlunoMenor = alunos[0][0]
+
+// for(let i = 1; i < alunos.length; i++){
+
+//     soma += alunos[i][1]
+
+//     if(alunos[i][1] > maior){
+//         maior = alunos[i][1]
+//         nomeAlunoMaior = alunos[i][0]
+
+//     }else if(alunos[i][1] === maior){
+//         nomeAlunoMaior += `, ${alunos[i][0]}`
+
+//     }
+
+
+//     if(alunos[i][1] < menor){
+//         menor = alunos[i][1]
+//         nomeAlunoMenor = alunos[i][0]
+
+//     } else if(alunos[i][1] === menor){
+//         nomeAlunoMenor += `, ${alunos[i][0]}`
+
+//     }
+
+
+// }
+
+
+// let media = soma / alunos.length
+
+// console.log("        DETALHES DAS NOTAS")
+// console.log("===================================")
+
+// console.log("Média da turma:", media.toFixed(2))
+// console.log("-----------------------------------")
+
+// console.log("Aluno(s) com maior nota:", nomeAlunoMaior.toUpperCase())
+// console.log("-----------------------------------")
+
+// console.log("Aluno(s) com menor nota:", nomeAlunoMenor.toUpperCase())
+// console.log("===================================")
