@@ -264,9 +264,9 @@ const PROMPT = require("prompt-sync")()
 
 
 // for(let c = 1; c <= 3; c++){
+    //     let nota
+    //     do{
 //     let nome = PROMPT("Nome do aluno: ")
-//     let nota
-//     do{
 //         nota = Number(PROMPT("Nota do aluno: "))
 //         console.log("===================================")
         
@@ -302,18 +302,18 @@ const PROMPT = require("prompt-sync")()
 
 
 //     if(alunos[i][1] < menor){
-//         menor = alunos[i][1]
-//         nomeAlunoMenor = alunos[i][0]
-
-//     } else if(alunos[i][1] === menor){
-//         nomeAlunoMenor += `, ${alunos[i][0]}`
-
-//     }
-
-
-// }
-
-
+    //         menor = alunos[i][1]
+    //         nomeAlunoMenor = alunos[i][0]
+    
+    //     } else if(alunos[i][1] === menor){
+        //         nomeAlunoMenor += `, ${alunos[i][0]}`
+        
+        //     }
+        
+        
+        // }
+        
+        
 // let media = soma / alunos.length
 
 // console.log("        DETALHES DAS NOTAS")
@@ -327,3 +327,59 @@ const PROMPT = require("prompt-sync")()
 
 // console.log("Aluno(s) com menor nota:", nomeAlunoMenor.toUpperCase())
 // console.log("===================================")
+
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex07: Simule um carrinho de compras: leia nomes e preços de produtos em um laço até
+// o usuário digitar "sair". Armazene em arrays. Ao final, liste todos os itens, exiba o
+// subtotal, aplique 10% de desconto se houver mais de 3 itens e mostre o total a pagar.
+
+console.log("==========================================")
+console.log("       Bem-vindo(a) a nossa loja!")
+console.log("==========================================")
+
+const produtos = []
+let subTotal = 0
+
+while(true){
+    let nomeProduto = PROMPT("Nome do Produto: ").toLowerCase()
+    if(nomeProduto === "sair"){
+        break
+    }
+    let precoProduto
+    
+    do{
+        precoProduto = Number(PROMPT("Preço do Produto: "))
+        console.log("---------------------------------------")
+
+        if(isNaN(precoProduto) || precoProduto <= 0){
+            console.log("Adicione um valor válido")
+        }
+
+    }while(isNaN(precoProduto) || precoProduto <= 0)
+    
+
+    const produto = [nomeProduto, precoProduto]
+    produtos.push(produto)
+    
+}
+
+console.log("==========================================")
+console.log("           Detalhes da compra")
+console.log("==========================================")
+
+
+console.log("PRODUTO                        VALOR")
+// console.log("CAMERA ------------------------- R$ 1000,00")
+for(let i = 0; i < produtos.length; i++){
+
+    subTotal += produtos[i][1]
+
+    console.log(produtos[i][0].toUpperCase() + " ".padEnd(25, "-"), "R$", Number(produtos[i][1]).toFixed(2).replace(".", ","))
+
+}
+
+console.log("------------------------------------------")
+
+console.log("Subtotal R$", subTotal.toFixed(2).replace(".",","))
+console.log("------------------------------------------")
