@@ -334,52 +334,104 @@ const PROMPT = require("prompt-sync")()
 // o usuário digitar "sair". Armazene em arrays. Ao final, liste todos os itens, exiba o
 // subtotal, aplique 10% de desconto se houver mais de 3 itens e mostre o total a pagar.
 
-console.log("==========================================")
-console.log("       Bem-vindo(a) a nossa loja!")
-console.log("==========================================")
+// console.log("==========================================")
+// console.log("       Bem-vindo(a) a nossa loja!")
+// console.log("==========================================")
 
-const produtos = []
-let subTotal = 0
 
-while(true){
-    let nomeProduto = PROMPT("Nome do Produto: ").toLowerCase()
-    if(nomeProduto === "sair"){
-        break
-    }
-    let precoProduto
+// const produtos = []
+// let subTotal = 0
+
+// while(true){
+//     let nomeProduto = PROMPT("Nome do Produto: ").toLowerCase()
+//     if(nomeProduto === "sair"){
+//         break
+//     }
+//     let precoProduto
     
-    do{
-        precoProduto = Number(PROMPT("Preço do Produto: "))
-        console.log("---------------------------------------")
+//     do{
+//         precoProduto = Number(PROMPT("Preço do Produto: "))
+//         console.log("---------------------------------------")
 
-        if(isNaN(precoProduto) || precoProduto <= 0){
-            console.log("Adicione um valor válido")
-        }
+//         if(isNaN(precoProduto) || precoProduto <= 0){
+//             console.log("Adicione um valor válido")
+//         }
 
-    }while(isNaN(precoProduto) || precoProduto <= 0)
+//     }while(isNaN(precoProduto) || precoProduto <= 0)
     
 
-    const produto = [nomeProduto, precoProduto]
-    produtos.push(produto)
+//     const produto = [nomeProduto, precoProduto]
+//     produtos.push(produto)
     
+// }
+
+// console.log("==========================================")
+// console.log("           Detalhes da compra")
+// console.log("==========================================")
+
+// if(produtos.length === 0){
+//     console.log("Nenhum produto adicionado")
+//     console.log("==========================================")
+    
+// }else{
+
+//     console.log("PRODUTO                          VALOR")
+//     console.log("__________________________________________")
+    
+    
+//     for(let i = 0; i < produtos.length; i++){
+        
+//         subTotal += produtos[i][1]
+//         console.log(`${(produtos[i][0].toUpperCase() + " ").padEnd(25, "-")}${(" R$ " + Number(produtos[i][1]).toFixed(2).replace(".", ",")).padStart(17, "-")}`)
+//     }
+    
+    
+//     console.log("__________________________________________")
+//     console.log()
+//     console.log(`${"Subtotal: ".padEnd(25, "-")}${(" R$ " + subTotal.toFixed(2).replace(".", ",")).padStart(17, "-")}`)
+
+//     if(produtos.length > 3){
+//         let desconto = subTotal * 0.10
+//         let totalPagarComDesconto = subTotal - desconto
+    
+//         console.log(`${"Valor do Desconto: ".padEnd(25, "-")}${(" R$ " + desconto.toFixed(2).replace(".", ",")).padStart(17, "-")}`)
+//         console.log(`${"Total a Pagar: ".padEnd(25, "-")}${(" R$ " + totalPagarComDesconto.toFixed(2).replace(".", ",")).padStart(17, "-")}`)
+    
+//     } else{
+//         console.log(`${"Total a Pagar: ".padEnd(25, "-")}${(" R$ " + subTotal.toFixed(2).replace(".", ",")).padStart(17, "-")}`)
+    
+//     }
+//     console.log("==========================================")
+// }
+
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex08: Leia uma palavra, armazene seus caracteres em um array e, percorrendo-o de
+// trás para frente com um laço for, monte a palavra invertida. Exiba a palavra
+// original, a invertida e informe se ela é um palíndromo.
+
+console.log("========================================")
+console.log("       DETECTOR DE PALÍNDROMOS")
+console.log("========================================")
+
+let palavra = PROMPT("Digite uma palavra: ").toUpperCase().trim().replaceAll(" ", "")
+
+let palavraArray =  palavra.split("")
+
+let palavraInvertida = ""
+
+for(let l = palavraArray.length - 1; l >= 0; l--){
+    palavraInvertida += palavraArray[l]
 }
 
-console.log("==========================================")
-console.log("           Detalhes da compra")
-console.log("==========================================")
+console.log("----------------------------------------")
+console.log(`Original   :  ${palavra}`)
+console.log(`Invertido :  ${palavraInvertida}`)
+console.log("----------------------------------------")
 
-
-console.log("PRODUTO                        VALOR")
-// console.log("CAMERA ------------------------- R$ 1000,00")
-for(let i = 0; i < produtos.length; i++){
-
-    subTotal += produtos[i][1]
-
-    console.log(produtos[i][0].toUpperCase() + " ".padEnd(25, "-"), "R$", Number(produtos[i][1]).toFixed(2).replace(".", ","))
-
+if(palavraInvertida === palavra){
+    console.log("Temos uma palavra Palíndromo")
+} else{
+    console.log("A frase digitada não é palíndromo!")
 }
-
-console.log("------------------------------------------")
-
-console.log("Subtotal R$", subTotal.toFixed(2).replace(".",","))
-console.log("------------------------------------------")
+console.log("========================================")
