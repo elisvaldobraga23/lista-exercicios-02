@@ -14,19 +14,16 @@ const PROMPT = require("prompt-sync")()
 
 //     let numeroTabuada = parseInt(PROMPT("Digite um número para ver sua tabuada: "))
     
-//     while(isNaN(numeroTabuada) || numeroTabuada <= 0){
+//     while(isNaN(numeroTabuada) || numeroTabuada < 1){
 
 //         console.log('=====================================================')  
-//         console.log("Valor inválido, Digite um número de 1 a 10")
+//         console.log("Valor inválido, Digite um número válido")
 //         console.log('----------------------------------------------------')  
 //         numeroTabuada = parseInt(PROMPT("Digite um número para ver sua tabuada: "))
 
-//         if(!isNaN(numeroTabuada) && numeroTabuada >= 0){
-//             continue
-//         }
 //     }
 
-//     if(!isNaN(numeroTabuada) && numeroTabuada >= 0 ){
+//     if(!isNaN(numeroTabuada) && numeroTabuada > 0 ){
         
 //         console.log('----------------------------------------------------')  
 //         console.log("================================")
@@ -34,7 +31,7 @@ const PROMPT = require("prompt-sync")()
 //         console.log("================================")
         
 //         for(let n = 1; n <= 10; n++){
-    //             console.log(`${numeroTabuada} X ${n} = ${numeroTabuada * n}`)
+//                 console.log(`${numeroTabuada} X ${n} = ${numeroTabuada * n}`)
 //         }
 
 //         console.log("================================")
@@ -55,6 +52,7 @@ const PROMPT = require("prompt-sync")()
 
 // Ex 02:Leia um número inteiro positivo e, usando um laço while, calcule e exiba quantos
 // dígitos ele possui. Trate o caso do número zero (que possui 1 dígito).
+
 // console.log("===============================")
 // console.log("    Quantidade de Dígitos")
 // console.log("===============================")
@@ -128,17 +126,15 @@ const PROMPT = require("prompt-sync")()
     
 //     sequenciaFibonacci = "1 - 1 - "
 
-//     let contador = 3
+//     for(let c = 2; c < numero; c++){
+
+//         let termo3 = termo1 + termo2
     
-//     while(contador <= numero){
-    //         let termo3 = termo1 + termo2
-    
-    //         sequenciaFibonacci += `${termo3} - `
+//         sequenciaFibonacci += `${termo3} - `
     
 //         termo1 = termo2
 //         termo2 = termo3
 
-//         contador++
 //     }
 
 //     sequenciaFibonacci += "FIM"
@@ -404,34 +400,168 @@ const PROMPT = require("prompt-sync")()
 //     console.log("==========================================")
 // }
 
-// |------------------------------------------------------------------------------------------------------------------|
 
 // Ex08: Leia uma palavra, armazene seus caracteres em um array e, percorrendo-o de
 // trás para frente com um laço for, monte a palavra invertida. Exiba a palavra
 // original, a invertida e informe se ela é um palíndromo.
 
-console.log("========================================")
-console.log("       DETECTOR DE PALÍNDROMOS")
-console.log("========================================")
+// console.log("========================================")
+// console.log("       DETECTOR DE PALÍNDROMOS")
+// console.log("========================================")
 
-let palavra = PROMPT("Digite uma palavra: ").toUpperCase().trim().replaceAll(" ", "")
+// let palavra = PROMPT("Digite uma palavra: ").toUpperCase().trim().replaceAll(" ", "")
 
-let palavraArray =  palavra.split("")
+// let palavraArray =  palavra.split("")
 
-let palavraInvertida = ""
+// let palavraInvertida = ""
 
-for(let l = palavraArray.length - 1; l >= 0; l--){
-    palavraInvertida += palavraArray[l]
-}
+// for(let l = palavraArray.length - 1; l >= 0; l--){
+//     palavraInvertida += palavraArray[l]
+// }
 
-console.log("----------------------------------------")
-console.log(`Original   :  ${palavra}`)
-console.log(`Invertido :  ${palavraInvertida}`)
-console.log("----------------------------------------")
+// console.log("----------------------------------------")
+// console.log(`Original   :  ${palavra}`)
+// console.log(`Invertido :  ${palavraInvertida}`)
+// console.log("----------------------------------------")
 
-if(palavraInvertida === palavra){
-    console.log("Temos uma palavra Palíndromo")
-} else{
-    console.log("A frase digitada não é palíndromo!")
-}
-console.log("========================================")
+// if(palavraInvertida === palavra){
+    //     console.log("Temos uma palavra Palíndromo!")
+    // } else{
+        //     console.log("A frase digitada não é Palíndromo!")
+        // }
+// console.log("========================================")
+        
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex09: Sorteie um número entre 1 e 100 com Math.random(). Usando um laço do...while,
+// peça ao usuário para adivinhar; a cada tentativa, diga se o número é maior ou
+// menor. Registre as tentativas em um array e, ao acertar, exiba o histórico e
+// quantas tentativas foram necessárias.
+
+// console.log("===========================================")
+// console.log("        jOGO ADIVINHAÇÃO DE NÚMERO")
+// console.log("===========================================")
+// console.log("Acabei de pensar em um número entre 1 e 100,\nserá que você consegue adivinhar?")
+// console.log("-------------------------------------------")
+
+// let numeroMaquina = Math.floor(Math.random() * 100 + 1)
+// let numeroUsuario
+
+// const numerosDigitados = []
+// let numerosDigitadosString = ""
+// let totalTentativas = 0
+
+// do{
+    //     numeroUsuario = parseInt(PROMPT("Qual número eu pensei: "))
+//     console.log("-------------------------------------------")
+
+//     if(isNaN(numeroUsuario) || numeroUsuario <= 0 || numeroUsuario > 100){
+//         console.log("Número Inválido!!\nInforme um número entre 1 e 100!")
+//         console.log("-------------------------------------------")
+//         continue
+//     }
+
+//     if(numerosDigitados.includes(numeroUsuario)){
+    //         console.log("Você já tentou esse número!\nTente um diferente.")
+    //         console.log("-------------------------------------------")
+    //         continue
+//     }
+    
+//     if(numeroUsuario < numeroMaquina){
+    //         console.log("Você errou!")
+    //         console.log("O número que pensei é MAIOR!")
+    //         console.log("-------------------------------------------")
+    //     } else if(numeroUsuario > numeroMaquina){
+        //         console.log("Você errou!")
+//         console.log("O número que pensei é MENOR!")
+//         console.log("-------------------------------------------")
+//     }
+
+    
+//     numerosDigitados.push(numeroUsuario)
+//     totalTentativas++
+
+// }while(numeroUsuario !== numeroMaquina){}
+
+// for(let i = 0; i < numerosDigitados.length; i++){
+
+//     let numeroFormatado = numerosDigitados[i]
+    
+//     if(numerosDigitados[i] < 10){
+//         numeroFormatado = `0${numerosDigitados[i]}`    
+//     } else{ 
+//         numeroFormatado = `${numerosDigitados[i]}` 
+//     }
+//     numerosDigitadosString += numeroFormatado
+
+//     if((i + 1) % 10 === 0){
+//         numerosDigitadosString += "\n"
+//     } else if (i < numerosDigitados.length - 1){
+//         numerosDigitadosString += "-"
+//     }
+// }
+
+// console.log("Números Digitados")
+// console.log(numerosDigitadosString)
+// console.log("-------------------------------------------")
+
+// console.log("Total de tentativas:", totalTentativas)
+// console.log("-------------------------------------------")
+// console.log("PARABÉNS! Você acertou o número ")
+// console.log("===========================================")
+
+// |------------------------------------------------------------------------------------------------------------------|
+
+// Ex: Crie uma matriz 3×4 (3 alunos, 4 notas cada). Leia os valores via laços aninhados.
+// Calcule e exiba a média de cada aluno, a média geral da turma e qual aluno teve
+// o melhor desempenho.
+
+// console.log("================================")
+// console.log("       Detalhe da Turma")
+
+
+// const notasAlunos = [
+    //     [8.5, 7.0, 9.0, 6.5],
+//     [5.0, 6.5, 7.0, 8.0],
+//     [10.0, 9.5, 8.5, 9.0]
+// ]
+
+// let somaTurma = 0
+
+// let melhorMedia = 0
+// let melhorAluno = 0
+
+
+// for(let i = 0; i < notasAlunos.length; i++){
+    
+//     let somaAluno = 0
+
+//     for(let n = 0; n < notasAlunos[i].length; n++){
+    //         somaAluno += notasAlunos[i][n]
+    //         somaTurma += notasAlunos[i][n]
+//     }
+
+//     let mediaAluno = somaAluno / notasAlunos[i].length
+    
+//     if(mediaAluno > melhorMedia){
+//         melhorMedia = mediaAluno
+//         melhorAluno = i + 1
+//     }
+
+//     console.log("--------------------------------")
+//     console.log("Soma do", i + 1 + "º", "Alunos :",somaAluno)
+//     console.log("Media do Aluno:", mediaAluno.toFixed(1))
+// }
+
+
+// let mediaTurma = somaTurma / (notasAlunos.length * notasAlunos[0].length)
+
+// console.log("================================")
+// console.log("Soma geral da turma:", somaTurma)
+// console.log("Média geral da turma:", mediaTurma.toFixed(1))
+// console.log("--------------------------------")
+// console.log("Melhor aluno:", melhorAluno)
+// console.log("Melhor média:", melhorMedia.toFixed(1))
+// console.log("================================")
+
+// |------------------------------------------------------------------------------------------------------------------|
